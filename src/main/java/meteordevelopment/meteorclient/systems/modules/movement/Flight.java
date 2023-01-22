@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.modules.movement;
 
@@ -22,7 +19,7 @@ import net.minecraft.util.math.Vec3d;
 public class Flight extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
     private final SettingGroup sgAntiKick = settings.createGroup("Anti Kick"); //Pog
-    
+
     private final Setting<Mode> mode = sgGeneral.add(new EnumSetting.Builder<Mode>()
         .name("mode")
         .description("The mode for Flight.")
@@ -70,7 +67,7 @@ public class Flight extends Module {
         .sliderRange(1, 20)
         .build()
     );
-    
+
     private int delayLeft = delay.get();
     private int offLeft = offTime.get();
     private boolean flip;

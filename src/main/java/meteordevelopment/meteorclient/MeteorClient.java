@@ -1,8 +1,3 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
-
 package meteordevelopment.meteorclient;
 
 import meteordevelopment.meteorclient.addons.AddonManager;
@@ -53,7 +48,7 @@ public class MeteorClient implements ClientModInitializer {
     public static MeteorClient INSTANCE;
     public static final IEventBus EVENT_BUS = new EventBus();
     public static final File FOLDER = new File(FabricLoader.getInstance().getGameDir().toString(), MOD_ID);
-    public static final Logger LOG = LoggerFactory.getLogger("Meteor Client");
+    public static final Logger LOG = LoggerFactory.getLogger("Utility Client");
 
     static {
         String versionString = MOD_META.getVersion().getFriendlyString();
@@ -70,7 +65,7 @@ public class MeteorClient implements ClientModInitializer {
             return;
         }
 
-        LOG.info("Initializing Meteor Client");
+        LOG.info("Initializing Utility Client");
 
         // Global minecraft client accessor
         mc = MinecraftClient.getInstance();

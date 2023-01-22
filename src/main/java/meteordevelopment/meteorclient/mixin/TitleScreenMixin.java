@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.mixin;
 
@@ -37,7 +34,7 @@ public class TitleScreenMixin extends Screen {
     private void onRenderIdkDude(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo info) {
         if (Utils.firstTimeTitleScreen) {
             Utils.firstTimeTitleScreen = false;
-            MeteorClient.LOG.info("Checking latest version of Meteor Client");
+            MeteorClient.LOG.info("Checking latest version of Utility Client");
 
             MeteorExecutor.execute(() -> {
                 String res = Http.get("https://meteorclient.com/api/stats").sendString();

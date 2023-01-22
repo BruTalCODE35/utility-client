@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.utils.network;
 
@@ -39,7 +36,7 @@ public class Http {
 
         public Request(Method method, String url) {
             try {
-                this.builder = HttpRequest.newBuilder().uri(new URI(url)).header("User-Agent", "Meteor Client");
+                this.builder = HttpRequest.newBuilder().uri(new URI(url)).header("User-Agent", "Utility Client");
                 this.method = method;
             } catch (URISyntaxException e) {
                 e.printStackTrace();

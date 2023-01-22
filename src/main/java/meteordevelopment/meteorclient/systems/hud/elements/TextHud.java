@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.hud.elements;
 
@@ -40,7 +37,7 @@ public class TextHud extends HudElement {
     public final Setting<String> text = sgGeneral.add(new StringSetting.Builder()
         .name("text")
         .description("Text to display with Starscript.")
-        .defaultValue("Meteor Client")
+        .defaultValue("Utility Client")
         .onChanged(s -> recompile())
         .wide()
         .renderer(StarscriptTextBoxRenderer.class)

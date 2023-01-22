@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.modules.world;
 
@@ -421,7 +418,7 @@ public class Nuker extends Module {
             blocks.clear();
         });
     }
-    
+
     @EventHandler(priority = EventPriority.HIGHEST)
     private void onBlockBreakingCooldown(BlockBreakingCooldownEvent event) {
         event.cooldown = 0;

@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.asm.transformers;
 
@@ -24,7 +21,7 @@ public class GameRendererTransformer extends AsmTransformer {
     public void transform(ClassNode klass) {
         // Modify GameRenderer.getFov()
         MethodNode method = getMethod(klass, getFovMethod);
-        if (method == null) throw new RuntimeException("[Meteor Client] Could not find method GameRenderer.getFov()");
+        if (method == null) throw new RuntimeException("[Utility Client] Could not find method GameRenderer.getFov()");
 
         int injectionCount = 0;
 
@@ -52,7 +49,7 @@ public class GameRendererTransformer extends AsmTransformer {
             }
         }
 
-        if (injectionCount < 2) throw new RuntimeException("[Meteor Client] Failed to modify GameRenderer.getFov()");
+        if (injectionCount < 2) throw new RuntimeException("[Utility Client] Failed to modify GameRenderer.getFov()");
     }
 
     private void generateEventCall(InsnList insns, AbstractInsnNode loadPreviousFov) {

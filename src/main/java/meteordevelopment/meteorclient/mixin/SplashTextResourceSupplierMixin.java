@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.mixin;
 
@@ -33,13 +30,13 @@ public class SplashTextResourceSupplierMixin {
 
     private static List<String> getMeteorSplashes() {
         return Arrays.asList(
-                "Meteor on Crack!",
-                "Star Meteor Client on GitHub!",
+                "Utility Client!",
+                "Star Utility Client on GitHub!",
                 "Based utility mod.",
                 "§6MineGame159 §fbased god",
                 "§4meteorclient.com",
-                "§4Meteor on Crack!",
-                "§6Meteor on Crack!"
+                "§4Utility Client!",
+                "§6Utility Client!"
         );
     }
 

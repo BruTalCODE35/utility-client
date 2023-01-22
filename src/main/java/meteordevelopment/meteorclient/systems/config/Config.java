@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.config;
 
@@ -82,7 +79,7 @@ public class Config extends System<Config> {
         .name("window-title-text")
         .description("The text it displays in the window title.")
         .visible(customWindowTitle::get)
-        .defaultValue("Minecraft {mc_version} - Meteor Client {version}")
+        .defaultValue("Minecraft {mc_version} - Utility Client {version}")
         .onChanged(value -> mc.updateWindowTitle())
         .build()
     );

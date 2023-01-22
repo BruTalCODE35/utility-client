@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.mixin;
 
@@ -24,7 +21,7 @@ import java.util.List;
 public class CrashReportMixin {
     @Inject(method = "addStackTrace", at = @At("TAIL"))
     private void onAddStackTrace(StringBuilder sb, CallbackInfo info) {
-        sb.append("\n\n-- Meteor Client --\n\n");
+        sb.append("\n\n-- Utility Client --\n\n");
         sb.append("Version: ").append(MeteorClient.VERSION).append("\n");
         if (!MeteorClient.DEV_BUILD.isEmpty()) {
             sb.append("Dev Build: ").append(MeteorClient.DEV_BUILD).append("\n");

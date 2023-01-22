@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.modules.misc;
 
@@ -80,7 +77,7 @@ public class DiscordPresence extends Module {
     private final Setting<List<String>> line2Strings = sgLine2.add(new StringListSetting.Builder()
         .name("line-2-messages")
         .description("Messages used for the second line.")
-        .defaultValue("Meteor on Crack!", "{round(server.tps, 1)} TPS", "Playing on {server.difficulty} difficulty.", "{server.player_count} Players online")
+        .defaultValue("Utility Client!", "{round(server.tps, 1)} TPS", "Playing on {server.difficulty} difficulty.", "{server.player_count} Players online")
         .onChanged(strings -> recompileLine2())
         .renderer(StarscriptTextBoxRenderer.class)
         .build()
@@ -145,13 +142,13 @@ public class DiscordPresence extends Module {
 
     @Override
     public void onActivate() {
-        DiscordIPC.start(835240968533049424L, null);
+        DiscordIPC.start(1066615531857260595L, null);
 
         rpc.setStart(System.currentTimeMillis() / 1000L);
 
-        String largeText = "Meteor Client " + MeteorClient.VERSION;
+        String largeText = "Utility Client " + MeteorClient.VERSION;
         if (!MeteorClient.DEV_BUILD.isEmpty()) largeText += " Dev Build: " + MeteorClient.DEV_BUILD;
-        rpc.setLargeImage("meteor_client", largeText);
+        rpc.setLargeImage("idk-v", largeText);
 
         currentSmallImage = SmallImage.Snail;
 
@@ -242,7 +239,7 @@ public class DiscordPresence extends Module {
         }
         else {
             if (!lastWasInMainMenu) {
-                rpc.setDetails("Meteor Client " + (MeteorClient.DEV_BUILD.isEmpty() ? MeteorClient.VERSION : MeteorClient.VERSION + " " + MeteorClient.DEV_BUILD));
+                rpc.setDetails("Utility Client " + (MeteorClient.DEV_BUILD.isEmpty() ? MeteorClient.VERSION : MeteorClient.VERSION + " " + MeteorClient.DEV_BUILD));
 
                 if (mc.currentScreen instanceof TitleScreen) rpc.setState("Looking at title screen");
                 else if (mc.currentScreen instanceof SelectWorldScreen) rpc.setState("Selecting world");

@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.systems.accounts.types;
 
@@ -75,7 +72,7 @@ public class TheAlteningAccount extends Account<TheAlteningAccount> {
         YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication) new YggdrasilAuthenticationService(((MinecraftClientAccessor) mc).getProxy(), "", Environment.create(AUTH, ACCOUNT, SESSION, SERVICES, "The Altening")).createUserAuthentication(Agent.MINECRAFT);
 
         auth.setUsername(name);
-        auth.setPassword("Meteor on Crack!");
+        auth.setPassword("Utility Client!");
 
         return auth;
     }

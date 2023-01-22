@@ -1,7 +1,4 @@
-/*
- * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client).
- * Copyright (c) Meteor Development.
- */
+
 
 package meteordevelopment.meteorclient.utils.network;
 
@@ -176,7 +173,7 @@ public class PacketUtilsUtil {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
         writer.write("/*\n");
-        writer.write(" * This file is part of the Meteor Client distribution (https://github.com/MeteorDevelopment/meteor-client/).\n");
+        writer.write(" * This file is part of the Utility Client distribution (https://github.com/MeteorDevelopment/meteor-client/).\n");
         writer.write(" * Copyright (c) Meteor Development.\n");
         writer.write(" */\n\n");
 
